@@ -1,0 +1,44 @@
+/***************/
+/*GLOBAL CONFIG*/
+/***************/
+
+/*GLOBAL*/
+*{
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+}
+/*HTML CONFIG*/
+html{
+    font-family: "Nunito Sans", sans-serif;
+}
+/*BUTTON CONFIG*/
+button{
+    cursor: pointer;
+}
+
+/***********/
+/*VARIABLES*/
+/***********/
+:root{
+    --Background: hsl(210, 26%, 16%);
+    --Elements: hsl(210, 24%, 22%);
+    --Text: hsl(0, 0%, 100%);
+}
+
+/******************/
+/*AJUSTE DE FONTES*/
+/******************/
+@media(max-width: 1080px){
+    html{
+        font-size: 93.75%;
+    }
+}
+@media(max-width: 720px){
+    html{
+        font-size: 87.50%;
+    }
+}
