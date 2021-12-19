@@ -1,0 +1,291 @@
+/************************/
+/*ESTILOS DO FILTERINPUT*/
+/************************/
+
+/*SEÇÃO DO FILTER INPUT*/
+.filterInputContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    margin: auto auto auto auto;
+    padding: 0 2rem 0 2rem;
+
+    max-width: 84rem;
+
+    /*FORMULÁRIO*/
+    .searchForm {
+        background: var(--components-background);
+
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        border-radius: 0.5rem;
+
+        padding: 0 2rem 0 2rem;
+
+        width: 30rem;
+        height: 3.5rem;
+
+        /*BOTÃO DE SUBMIT*/
+        .submitButton {
+            background: none;
+
+            border: none;
+
+            cursor: unset;
+
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            height: 100%;
+
+            /*ÍCONE DO BOTÃO*/
+            img {
+                margin-right: 1.5rem;
+
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+        }
+
+        /*INPUT DE PESQUISA*/
+        .searchInput {
+            background: none;
+
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+
+            color: var(--text-color);
+
+            font-family: "Nunito Sans", sans-serif;
+            font-size: 0.875rem;
+            font-weight: 300;
+
+            border: none;
+
+            outline: none;
+
+            height: 100%;
+
+            /*PLACEHOLDER*/
+            &::placeholder {
+                color: var(--text-color);
+
+                font-family: "Nunito Sans", sans-serif;
+                font-size: 0.875rem;
+                font-weight: 300;
+            }
+        }
+    }
+
+    /*CONTAINER MASTER DO FILTRO*/
+    .filterContainerMaster {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+
+        /*CONTAINER DO FILTRO*/
+        .filterContainer {
+            position: absolute;
+
+            cursor: pointer;
+
+            z-index: 1000;
+
+            /*EFEITO DE HOVER*/
+            &:hover .regionsContainer {
+                display: block;
+            }
+
+            /*BOTÃO FRONT DO FILTER*/
+            .filterButton {
+                background: var(--components-background);
+
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+
+                border-radius: 0.5rem;
+
+                padding: 0 1.5rem 0 1.5rem;
+
+                width: 12.5rem;
+                height: 3.5rem;
+
+                /*TEXTO*/
+                p {
+                    color: var(--text-color);
+
+                    font-family: "Nunito Sans", sans-serif;
+                    font-size: 0.875rem;
+                    font-weight: 300;
+                }
+            }
+
+            /*CONTAINER DAS REGIÕES*/
+            .regionsContainer {
+                background: var(--components-background);
+
+                display: none;
+
+                border-radius: 0.5rem;
+
+                margin-top: 0.25rem;
+                padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+
+                -webkit-transition: 0.2s;
+                -o-transition: 0.2s;
+                transition: 0.2s;
+
+                /*BOTÃO*/
+                button {
+                    background: none;
+
+                    color: var(--text-color);
+
+                    font-family: "Nunito Sans", sans-serif;
+                    font-size: 0.875rem;
+                    font-weight: 300;
+
+                    text-align: left;
+
+                    border: none;
+
+                    margin: 0.25rem 0 0.25rem 0;
+
+                    width: 100%;
+                    height: -webkit-fit-content;
+                    height: -moz-fit-content;
+                    height: fit-content;
+
+                    /*PRIMEIRO ELEMENTO*/
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    /*ÚLTIMO ELEMENTO*/
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*CLASSE HIDEEN*/
+.hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 1px;
+    height: 1px;
+}
+
+/***************/
+/*MEDIA QUERIES*/
+/***************/
+
+/*MEDIA PARA A VERSÃO MOBILE*/
+@media only screen and (max-width: 768px) {
+    /*SEÇÃO DO FILTER INPUT*/
+    .filterInputContainer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+
+        height: 13rem;
+
+        /*FORMULÁRIO*/
+        .searchForm {
+            margin-bottom: 1rem;
+            padding: 0 3.1666rem 0 3.1666rem;
+
+            width: 100%;
+            height: 6rem;
+
+            /*BOTÃO DE SUBMIT*/
+            .submitButton {
+                /*ÍCONE DO BOTÃO*/
+                img {
+                    margin-right: 2.375rem;
+
+                    width: 1.9792rem;
+                    height: 1.9792rem;
+                }
+            }
+
+            /*INPUT DE PESQUISA*/
+            .searchInput {
+                font-size: 1.3854rem;
+
+                /*PLACEHOLDER*/
+                &::placeholder {
+                    font-size: 1.3854rem;
+                }
+            }
+        }
+
+        /*CONTAINER MASTER DO FILTRO*/
+        .filterContainerMaster {
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+
+            /*CONTAINER DO FILTRO*/
+            .filterContainer {
+                /*BOTÃO FRONT DO FILTER*/
+                .filterButton {
+                    padding: 0 2.375rem 0 2.375rem;
+
+                    width: 25rem;
+                    height: 6rem;
+
+                    /*TEXTO*/
+                    p {
+                        font-size: 1.3854rem;
+                    }
+                }
+
+                /*CONTAINER DAS REGIÕES*/
+                .regionsContainer {
+                    padding: 1.9rem 2.375rem 1.9rem 2.375rem;
+
+                    /*BOTÃO*/
+                    button {
+                        font-size: 1.3854rem;
+
+                        margin: 0.3958rem 0 0.3958rem 0;
+                    }
+                }
+            }
+        }
+    }
+}

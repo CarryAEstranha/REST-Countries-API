@@ -1,0 +1,403 @@
+/***************************/
+/*ESTILOS DA PÁGINA DO PAÍS*/
+/***************************/
+
+/*MAIN DA PÁGINA*/
+.pageContainer {
+    margin: auto;
+    padding: 0 2rem 0 2rem;
+
+    margin-bottom: 3rem;
+
+    max-width: 84rem;
+
+    /*BOTÃO DE VOLTAR*/
+    .backButton {
+        background: var(--components-background);
+
+        color: var(--text-color);
+
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+
+        border: none;
+        border-radius: 0.5rem;
+
+        margin: 3rem 0 3rem 0;
+
+        width: 8.5rem;
+        height: 3.5rem;
+    }
+
+    /*CONTAINER DO PAIS*/
+    .countryContainer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+
+        /*BANDEIRA*/
+        .flag {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            width: 35rem;
+            height: 25rem;
+        }
+
+        /*CONTAINER COM AS INFORMAÇÕES*/
+        .informationContainer {
+            /*NOME DO PAIS*/
+            .countryName {
+                color: var(--text-color);
+
+                font-family: "Nunito Sans", sans-serif;
+                font-size: 1.75rem;
+                font-weight: 800;
+
+                margin-bottom: 2rem;
+            }
+
+            /*INFORMAÇÕES SOBRE O PAIS*/
+            .countryInformationContainer {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+
+                margin-bottom: 4rem;
+
+                /*LADO ESQUERDO*/
+                .leftSide {
+                    padding-right: 2rem;
+
+                    width: 18.125rem;
+
+                    /*INFORMAÇÃO DO PAÍS*/
+                    .countryInformation {
+                        color: var(--text-color);
+
+                        font-family: "Nunito Sans", sans-serif;
+                        font-size: 0.875rem;
+                        font-weight: 600;
+
+                        margin-bottom: 0.5rem;
+
+                        /*ÚLTIMO ELEMENTO*/
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        /*SPAN*/
+                        span {
+                            color: var(--text-color-auxiliar);
+
+                            font-weight: 300;
+                        }
+                    }
+                }
+
+                /*LADO DIREITO*/
+                .rightSide {
+                    width: 18.125rem;
+
+                    /*INFORMAÇÃO DO PAÍS*/
+                    .countryInformation {
+                        color: var(--text-color);
+
+                        font-family: "Nunito Sans", sans-serif;
+                        font-size: 0.875rem;
+                        font-weight: 600;
+
+                        margin-bottom: 0.5rem;
+
+                        /*ÚLTIMO ELEMENTO*/
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        /*SPAN*/
+                        span {
+                            color: var(--text-color-auxiliar);
+
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+
+            /*PAISES VIZINHOS*/
+            .borderCountries {
+                color: var(--text-color);
+
+                font-family: "Nunito Sans", sans-serif;
+                font-size: 0.875rem;
+                font-weight: 600;
+
+                width: 36.25rem;
+
+                /*SPAN*/
+                button {
+                    background: var(--components-background);
+
+                    color: var(--text-color-auxiliar);
+
+                    font-family: "Nunito Sans", sans-serif;
+                    font-size: 0.875rem;
+                    font-weight: 300;
+
+                    font-weight: 300;
+
+                    border: none;
+                    border-radius: 0.25rem;
+
+                    margin: 0 0.5rem 0.5rem 0;
+                    padding: 0.25rem 1.5rem 0.25rem 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+/*DUAL RING DE CARREGAMENTO*/
+.loadDualRing {
+    display: inline-block;
+
+    position: absolute;
+    left: 50%;
+
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    width: 5rem;
+    height: 5rem;
+
+    /*AFTER*/
+    &::after {
+        content: " ";
+
+        display: block;
+
+        border: 0.375rem solid #FFFFFF;
+        border-color: #FFFFFF transparent #FFFFFF transparent;
+        border-radius: 50%;
+
+        margin: 0.5rem;
+
+        -webkit-animation: load-dual-ring 1.2s linear infinite;
+        animation: load-dual-ring 1.2s linear infinite;
+
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+/*ANIMAÇÃO DO LOAD DUAL RING*/
+@-webkit-keyframes load-dual-ring {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load-dual-ring {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/***************/
+/*MEDIA QUERIES*/
+/***************/
+
+/*MEDIA PARA TELAS MENORES QUE 1242px*/
+@media only screen and (max-width: 1250px) and (min-width: 769px) {
+    /*MAIN DA PÁGINA*/
+    .pageContainer {
+        /*CONTAINER DO PAIS*/
+        .countryContainer {
+            -webkit-box-pack: left;
+            -ms-flex-pack: left;
+            justify-content: left;
+
+            /*BANDEIRA*/
+            .flag {
+                min-width: 32rem;
+            }
+
+            /*CONTAINER COM AS INFORMAÇÕES*/
+            .informationContainer {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+
+                margin-left: 2rem;
+
+                /*INFORMAÇÕES SOBRE O PAIS*/
+                .countryInformationContainer {
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+
+                    /*LADO ESQUERDO*/
+                    .leftSide {
+                        margin-bottom: 0.5rem;
+                        padding-right: 0;
+
+                        width: -webkit-fit-content;
+                        width: -moz-fit-content;
+                        width: fit-content;
+                    }
+
+                    /*LADO DIREITO*/
+                    .rightSide {
+                        width: -webkit-fit-content;
+                        width: -moz-fit-content;
+                        width: fit-content;
+                    }
+                }
+
+                /*PAISES VIZINHOS*/
+                .borderCountries {
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
+                    width: fit-content;
+                }
+            }
+        }
+    }
+}
+
+/*MEDIA PARA A VERSÃO MOBILE*/
+@media only screen and (max-width: 768px) {
+    /*MAIN DA PÁGINA*/
+    .pageContainer {
+        /*BOTÃO DE VOLTAR*/
+        .backButton {
+            font-size: 1.5833rem;
+
+            width: 13.125rem;
+            height: 6rem;
+        }
+
+        /*CONTAINER DO PAIS*/
+        .countryContainer {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+
+            -webkit-box-align: unset;
+            -ms-flex-align: unset;
+            align-items: unset;
+            -webkit-box-pack: unset;
+            -ms-flex-pack: unset;
+            justify-content: unset;
+
+            /*BANDEIRA*/
+            .flag {
+                margin-bottom: 3rem;
+
+                width: 100%;
+            }
+
+            /*CONTAINER COM AS INFORMAÇÕES*/
+            .informationContainer {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+
+                /*NOME DO PAIS*/
+                .countryName {
+                    font-size: 2.7708rem;
+                }
+
+                /*INFORMAÇÕES SOBRE O PAIS*/
+                .countryInformationContainer {
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+
+                    /*LADO ESQUERDO*/
+                    .leftSide {
+                        margin-bottom: 0.5rem;
+                        padding-right: 0;
+
+                        width: -webkit-fit-content;
+                        width: -moz-fit-content;
+                        width: fit-content;
+
+                        /*INFORMAÇÃO DO PAÍS*/
+                        .countryInformation {
+                            font-size: 1.3854rem;
+                        }
+                    }
+
+                    /*LADO DIREITO*/
+                    .rightSide {
+                        width: -webkit-fit-content;
+                        width: -moz-fit-content;
+                        width: fit-content;
+
+                        /*INFORMAÇÃO DO PAÍS*/
+                        .countryInformation {
+                            font-size: 1.3854rem;
+                        }
+                    }
+                }
+
+                /*PAISES VIZINHOS*/
+                .borderCountries {
+                    font-size: 1.3854rem;
+
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
+                    width: fit-content;
+
+                    /*SPAN*/
+                    button {
+                        font-size: 1.3854rem;
+                    }
+                }
+            }
+        }
+    }
+}

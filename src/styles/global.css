@@ -1,0 +1,51 @@
+/*****************/
+/*ESTILOS GLOBAIS*/
+/*****************/
+
+/*TODAS AS TAGS*/
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+/*BODY*/
+body {
+    background: var(--page-background);
+}
+
+/*SCROLLBAR*/
+body::-webkit-scrollbar {
+    background: var(--components-background);
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--text-color-auxiliar);
+}
+
+/*BOTÕES*/
+button {
+    cursor: pointer;
+}
+
+/*SELETOR ROOT*/
+:root {
+    /*CORES NEUTRAS*/
+    --components-background:    hsl(210, 24%, 22%);
+    --page-background:          hsl(206, 26%, 18%);
+    --text-color:               hsl(0, 0%, 100%);
+    --text-color-auxiliar:      hsl(0, 0%, 80%);
+}
+
+/***************/
+/*MEDIA QUERIES*/
+/***************/
+
+/*MEDIA PARA TELAS MENORES QUE 768px*/
+@media only screen and (max-width: 768px) {
+    /*HTML*/
+    html {
+        font-size: 2.0833vw;
+    }
+}
