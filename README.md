@@ -1,9 +1,61 @@
-# REST-Country-API
+# Frontend Mentor - REST Countries API With Color Theme Switcher Solution
 
-![image](https://user-images.githubusercontent.com/53675070/130886676-01d1a41e-7e40-404c-9b7e-63b1d91a34ac.png)
+This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-REST Country API se trata de um site para vizualizar informações sobre um país. Nele é possível realizar buscas por determinados países, filtrar por região e ainda conta com os temas claro e escuro.
+## Table of contents
 
-O site foi construído utilizando React e Sass. Para conseguir as informações dos países eu utilizei a API [REST Countries](https://restcountries.eu).
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-O site pode ser acessado [nesse link](https://rest-country-api.web.app/).
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- See all countries from the API on the homepage
+- Search for a country using an `input` field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Click through to the border countries on the detail page
+- Toggle the color scheme between light and dark mode *(optional)*
+
+### Screenshot
+
+![](./screenshot.jpg)
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Sass](https://styled-components.com/) - For styles
+
+### Useful resources
+
+- [Google Hosting](https://firebase.google.com/docs/hosting) - used to deploy the app.
+
+## Author
+
+- Instagram - [@edununes99](https://www.instagram.com/edununes99/)
+- Frontend Mentor - [@CarryAEstranha](https://www.frontendmentor.io/profile/CarryAEstranha/)
+- Linkedin - [Edu Nunes](https://www.linkedin.com/in/edu-nunes-627422209/)
