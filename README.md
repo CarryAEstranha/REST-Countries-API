@@ -28,12 +28,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Front](https://user-images.githubusercontent.com/53675070/146688548-3b927641-fc4a-42f9-9072-06b38b8c5ffd.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://rest-country-api.web.app
 
 ## My process
 
